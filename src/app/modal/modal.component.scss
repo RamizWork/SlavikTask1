@@ -1,0 +1,64 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.mat__button_false, .mat__button_completed {
+  margin: 0 0 0 10px;
+  font-size: 25px;
+}
+
+.mat__button_label {
+  font-size: 25px;
+  height: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.modal {
+  padding: 20px;
+  position: absolute;
+  background-color: #FFFFFF;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 5px;
+}
+
+.add__card-button {
+  transform: translate(50%, 0%);
+  width: 300px;
+  height: 30px;
+  color: #FFFFFF;
+  font-size: 20px;
+  background-color: #60d306;
+  transition: 1s;
+}
+
+.add__card-button:hover {
+  background-color: #075b02;
+}
+
+.close__card_btn {
+  border: 0;
+  transform: translate(50%, 0%);
+  margin-top: 10px;
+  width: 300px;
+  height: 30px;
+  color: black;
+  font-size: 20px;
+  background-color: #ec7a7a;
+  transition: 1s;
+}
+
+.close__card_btn:hover {
+  background-color: #b7070c;
+}

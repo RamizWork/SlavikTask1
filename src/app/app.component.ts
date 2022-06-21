@@ -1,24 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {TodoInterface} from "../shared/interfaces/todo.interface";
+import {Component} from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  todoData: TodoInterface[] = [];
-
-  constructor(private http: HttpClient) {
+  constructor() {
   }
 
-  ngOnInit() {
-      this.http.get<TodoInterface[]>('https://jsonplaceholder.typicode.com/todos?_limit=20')
-      .subscribe(response => {
-        this.todoData = response;
-        console.log(this.todoData);
-      })
-  }
 }

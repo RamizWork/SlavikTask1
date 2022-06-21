@@ -1,0 +1,55 @@
+.container {
+  border: 1px solid #868484;
+}
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.example-container .mat-form-field {
+  width: 220px;
+}
+
+.example-container form {
+  margin-bottom: 20px;
+}
+
+.example-container form > * {
+  margin: 5px 0;
+}
+
+.example-container form {
+  .title__error {
+    margin: -15px 0 5px 0;
+  }
+
+}
+
+.example-container .mat-radio-button {
+  margin: 0 12px;
+}
+
+.add__card {
+
+  .add__card-button {
+    padding: 10px;
+    width: 220px;
+    font-size: 20px;
+    background-color: #f8f8f8;
+    color: #277227;
+    transition: 1s;
+
+    &[disabled] {
+      opacity: 0.6  ;
+    }
+  }
+
+  .add__card-button:hover {
+    cursor: pointer;
+  }
+
+}
+
+
+
+

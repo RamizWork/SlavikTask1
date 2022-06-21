@@ -1,0 +1,35 @@
+<div class="backdrop" (click)="close.emit()"></div>
+
+<div class="modal">
+  <div class="container">
+    <div class="example-container">
+      <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <div>
+          <label class="mat__button_label">Completed status: </label>
+          <mat-radio-group formControlName="completed">
+            <mat-radio-button class="mat__button_completed" name="completed" value="true">Completed</mat-radio-button>
+            <mat-radio-button class="mat__button_false" name="completed" value="false">Is not completed
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <mat-form-field appearance="fill" class="title">
+          <mat-label>Title text</mat-label>
+          <input matInput placeholder="Add title text" type="text" formControlName="title">
+        </mat-form-field>
+        <div class="title__error" *ngIf="form.get('title').touched && form.get('title').errors?.required">Field title
+          not be empty
+        </div>
+
+        <div class="add__card">
+          <button class="add__card-button" type="submit" [disabled]="form.invalid">Add card
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <button class="close__card_btn" (click)="close.emit()">Close</button>
+
+</div>

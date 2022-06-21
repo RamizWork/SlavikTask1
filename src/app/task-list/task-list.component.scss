@@ -1,0 +1,30 @@
+.task-list {
+  background-color: #172c8f;
+}
+
+.task {
+  display: flex;
+}
+
+.task__false, .task__completed {
+  color: #ffffff;
+  flex: 1 1 auto;
+}
+
+.example-button-row {
+  text-align: center;
+  font-size: 30px;
+
+  &.task__add {
+    flex: 0 1 300px;
+  }
+}
+
+.add__card_button {
+  font-size: 25px;
+  width: 250px;
+}
+
+.mat-card {
+  border-radius: 0;
+}

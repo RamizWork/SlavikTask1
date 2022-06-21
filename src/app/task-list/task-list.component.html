@@ -1,0 +1,15 @@
+<mat-card class="task-list">
+  <div class="task">
+    <div class="example-button-row task__completed">
+      <span>{{"Количество готовых задач: " + completedTasksSize}}</span>
+    </div>
+    <div class="example-button-row task__false">
+      <span>{{"Количество не готовых задач: " + falseTasksSize}}</span>
+    </div>
+    <div class="example-button-row task__add">
+      <button class="add__card_button" mat-raised-button color="primary" (click)="openModal()">Add Task-Card</button>
+    </div>
+  </div>
+</mat-card>
+
+

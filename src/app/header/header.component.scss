@@ -1,0 +1,14 @@
+.header {
+  font-size: 30px;
+  color: #FFFFFF;
+  padding: 30px;
+  background-color: #e50f68;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+.header:hover {
+  background-color: #ef5b99;
+  color: black;
+}

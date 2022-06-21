@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+  border: 1px solid green;
+  justify-content: center;
+  app-add-card, app-task-list{
+    flex: 1 1 auto;
+  }
+}
+app-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mat-card[_ngcontent-hfq-c46] {
+  border-radius: 0;
+  width: 1875px;
+}

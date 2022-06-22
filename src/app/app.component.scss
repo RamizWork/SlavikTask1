@@ -4,6 +4,7 @@
   justify-content: center;
   app-add-card, app-task-list{
     flex: 1 1 auto;
+    width: 100%;
   }
 }
 app-cards {
@@ -13,5 +14,4 @@ app-cards {
 
 .mat-card[_ngcontent-hfq-c46] {
   border-radius: 0;
-  width: 1875px;
 }

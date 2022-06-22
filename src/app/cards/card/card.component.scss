@@ -1,7 +1,18 @@
+mat-card {
+  position: relative;
+}
+
 .example-card {
   width: 400px;
-  margin: 15px 15px;
+  margin: 15px;
   background-color: #cecbcb;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.input__show-true  {
+  flex: 1 1 auto;
 }
 
 label input {
@@ -18,6 +29,7 @@ label span {/* <-- стилизируем новый */
   border-radius:2px;
   padding:3px;
 }
+
 [type=checkbox]:checked + span:before {/* <-- ставим иконку, когда чекбокс включен  */
   content: '\2714';
   position: absolute;
@@ -26,4 +38,21 @@ label span {/* <-- стилизируем новый */
   font-size:23px;
   color:green;
 }
+
+span, label {
+  cursor: pointer;
+}
+
+.mat__card_button-delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    font-weight: 500;
+  }
+}
+
 

@@ -11,7 +11,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {TaskListComponent} from './task-list/task-list.component';
 import {GetDataService} from "./shared/services/get-data.service";
 import {CardsComponent} from './cards/cards.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AddCardComponent} from './add-card/add-card.component';
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatRadioModule} from "@angular/material/radio";
@@ -33,22 +33,23 @@ import { HeaderComponent } from './header/header.component';
     ModalComponent,
     HeaderComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatButtonModule,
-    ReactiveFormsModule,
-    MatCheckboxModule,
-    MatRadioModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatOptionModule,
-    MatIconModule,
-    MatInputModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatButtonModule,
+        ReactiveFormsModule,
+        MatCheckboxModule,
+        MatRadioModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatOptionModule,
+        MatIconModule,
+        MatInputModule,
+        FormsModule
+    ],
   providers: [GetDataService, CardsComponent],
   bootstrap: [AppComponent]
 })

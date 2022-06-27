@@ -1,17 +1,28 @@
 <mat-card *ngIf="card" class="example-card">
 
   <mat-card-title>{{card.title}}</mat-card-title>
-  <div class="input__show-true">
-    <label>
-      <input [checked]="card.completed" type='checkbox' (click)="changeStatus($event)">
-      <span></span>
-      Completed Status {{card.completed}}
-    </label>
-  </div>
-  <mat-card-actions>
 
-    <div class="mat__card_button-delete" (click)="deleteTodo()">Х</div>
+  <mat-card class="result">
+    <mat-card-content>
+      <section class="example-section">
+        <mat-checkbox
+          class="example-margin"
+          (change)="changeStatus($event)"
+          [ngModel]="card.completed"
+          color=""
+        >
+          Completed Status {{card.completed}}
+        </mat-checkbox>
+      </section>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card-actions>
+    <div class="mat__card_button-delete" (click)="deleteTodo()">
+      <img src="./../../../assets/16699018971541068758.svg" alt="">
+    </div>
     <button class="card_button-delete" mat-button (click)="deleteTodo()">Delete</button>
   </mat-card-actions>
+
 </mat-card>
 

@@ -4,6 +4,7 @@ mat-card {
 
 .example-card {
   width: 400px;
+  min-height: 140px;
   margin: 15px;
   background-color: #cecbcb;
   position: relative;
@@ -11,32 +12,32 @@ mat-card {
   flex-direction: column;
 }
 
-.input__show-true  {
+.input__show-true {
   flex: 1 1 auto;
 }
 
 label input {
-  display: none;/* <--скрываем дефолтный чекбокс */
+  display: none; /* <--скрываем дефолтный чекбокс */
 }
 
-label span {/* <-- стилизируем новый */
+label span { /* <-- стилизируем новый */
   height: 12px;
   width: 12px;
   border: 1px solid gray;
   display: inline-block;
   position: relative;
-  background-color:#FFF;
-  border-radius:2px;
-  padding:3px;
+  background-color: #FFF;
+  border-radius: 2px;
+  padding: 3px;
 }
 
-[type=checkbox]:checked + span:before {/* <-- ставим иконку, когда чекбокс включен  */
+[type=checkbox]:checked + span:before { /* <-- ставим иконку, когда чекбокс включен  */
   content: '\2714';
   position: absolute;
   top: -5px;
   left: 0;
-  font-size:23px;
-  color:green;
+  font-size: 23px;
+  color: green;
 }
 
 span, label {
@@ -50,9 +51,28 @@ span, label {
   font-size: 15px;
   cursor: pointer;
   transition: 0.2s;
+
   &:hover {
     font-weight: 500;
   }
+}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+
+.card_button-delete {
+  align-items: end;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+
+  justify-content: end;
+}
+
+.mat-card-title {
+  flex: 1 1 auto;
 }
 
 

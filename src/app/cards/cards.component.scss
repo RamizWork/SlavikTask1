@@ -1,8 +1,16 @@
-.card-wrapper {
+.card__wrapper_div {
   display: flex;
-  flex: 1 1 auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-wrapper {
+  flex: 0 1 auto;
 }
 
 app-task-list {
+  position: sticky;
+  top: 80px;
   width: 100%;
+  z-index: 4;
 }

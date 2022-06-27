@@ -1,12 +1,15 @@
 <ng-container *ngIf="getTodoData$ | async as todoData">
   <app-task-list *ngIf="todoData.length" [todos]="todoData" (modal)="openModal($event)"></app-task-list>
-  <app-modal *ngIf="modal" (close)="closeModalWindow()" (keydown)="$event.code == 'Escape'? modal = false : true"></app-modal>
-  <app-card
-    class="card-wrapper"
-    *ngFor="let todo of todoData; let i = index;"
-    [card]="todo"
-    (change$)="changeStatus($event)"
-    (deleteTodo$)="deleteCard($event)"
-  ></app-card>
+  <app-modal *ngIf="modal" (close)="closeModalWindow()"
+             (keydown)="$event.code == 'Escape'? modal = false : true">
+  </app-modal>
+  <div class="card__wrapper_div">
+    <app-card class="card-wrapper"
+              *ngFor="let todo of todoData; let i = index;"
+              [card]="todo"
+              (change$)="changeStatus($event)"
+              (deleteTodo$)="deleteCard($event)"
+    ></app-card>
+  </div>
 </ng-container>
 <ng-container *ngIf="loadTodoData$ | async"></ng-container>

@@ -12,6 +12,7 @@ export class CardComponent implements OnInit {
   @Input() card: TodoInterface | undefined;
   @Output() deleteTodo$ = new EventEmitter<number>();
   @Output() change$ = new EventEmitter<CardStatusInterface>();
+  disabled = false;
 
   constructor() {
   }
@@ -26,8 +27,9 @@ export class CardComponent implements OnInit {
   changeStatus(event: any) {
     const cardStatus: CardStatusInterface = {
       id: this.card?.id,
-      completed: event.target.checked
+      completed: event.checked
     };
+    console.log("Event", event)
     this.change$.emit(cardStatus);
   }
 }
